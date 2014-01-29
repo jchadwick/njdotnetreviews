@@ -1,0 +1,16 @@
+﻿<h3>Reviews</h3>
+<ul class="meetings">
+    <li class="meeting" ng-repeat="meeting in meetings | orderByPriority">
+        <span>[{{meeting.rating}}]</span>
+        <span>{{meeting.title}} ({{meeting.date}})</span>
+        <span>
+            <a ng-repeat="rating in [1,2,3,4,5]" ng-click="rateMeeting(meeting, rating)">{{rating}}</a>
+        </span>
+    </li>
+</ul>
+
+<ul class="reviews">
+    <li class="review" ng-repeat="review in reviews | orderByPriority">
+        <span>{{review.meetingId}}: {{review.rating}}</span>
+    </li>
+</ul>

@@ -22,6 +22,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include="app\partials\reviews.html" />
     <Content Include="app\partials\meetings.html" />
     <Content Include="firebase.json" />
     <Content Include="README.md" />

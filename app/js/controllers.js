@@ -20,6 +20,20 @@ angular.module('myApp.controllers', [])
        };
    }])
 
+   .controller('ReviewsCtrl', ['$scope', 'syncData', function($scope, syncData) {
+       $scope.meetings = syncData('meetings');
+       $scope.reviews = syncData('reviews');
+
+       $scope.rateMeeting = function(meeting, rating) {
+           $scope.reviews.$add({meetingId:meeting.$id, rating:rating});
+           
+           meeting.rating_count = (meeting.rating_count || 0) + 1;
+           meeting.rating_total = (meeting.rating_total || 0) + rating;
+           meeting.rating = parseInt(meeting.rating_total / meeting.rating_count);
+           $scope.meetings.$save(meeting.$id);
+       };
+   }])
+
   .controller('ChatCtrl', ['$scope', 'syncData', function($scope, syncData) {
       $scope.newMessage = null;
 

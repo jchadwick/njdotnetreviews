@@ -15,6 +15,11 @@ angular.module('myApp.routes', ['ngRoute'])
          controller: 'MeetingsCtrl'
       });
 
+      $routeProvider.when('/reviews', {
+         templateUrl: 'partials/reviews.html',
+         controller: 'ReviewsCtrl'
+      });
+
       $routeProvider.when('/chat', {
          templateUrl: 'partials/chat.html',
          controller: 'ChatCtrl'
@@ -31,5 +36,5 @@ angular.module('myApp.routes', ['ngRoute'])
          controller: 'LoginCtrl'
       });
 
-      $routeProvider.otherwise({redirectTo: '/meetings'});
+      $routeProvider.otherwise({redirectTo: '/reviews'});
    }]);
