@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{c8d8dd8a-4472-47c7-9882-6ee813d151e8}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>scripts\web-server.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <NodeExePath />
+    <NodeExeArguments />
+    <ScriptArguments />
+    <NodejsPort>5858</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+    <LaunchUrl>http://localhost:8000</LaunchUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="app\partials\meetings.html" />
+    <Content Include="firebase.json" />
+    <Content Include="README.md" />
+    <Content Include="app\index-async.html" />
+    <Content Include="app\index.html" />
+    <Content Include="config\security-rules.json" />
+    <Compile Include="config\karma-e2e.conf.js" />
+    <Compile Include="config\karma.conf.js" />
+    <Compile Include="scripts\web-server.js" />
+    <Content Include="app\css\app.css" />
+    <Compile Include="app\js\app.js" />
+    <Compile Include="app\js\config.js" />
+    <Compile Include="app\js\controllers.js" />
+    <Compile Include="app\js\directives.js" />
+    <Compile Include="app\js\filters.js" />
+    <Compile Include="app\js\module.routeSecurity.js" />
+    <Compile Include="app\js\module.waitForAuth.js" />
+    <Compile Include="app\js\routes.js" />
+    <Compile Include="app\js\service.firebase.js" />
+    <Compile Include="app\js\service.login.js" />
+    <Compile Include="app\js\services.js" />
+    <Content Include="app\partials\account.html" />
+    <Content Include="app\partials\chat.html" />
+    <Content Include="app\partials\home.html" />
+    <Content Include="app\partials\login.html" />
+    <Content Include="bower_components\bootstrap\.bower.json" />
+    <Content Include="bower_components\bootstrap\bower.json" />
+    <Content Include="bower_components\bootstrap\README.md" />
+    <Content Include="bower_components\jquery\.bower.json" />
+    <Content Include="bower_components\jquery\bower.json" />
+    <Content Include="bower_components\jquery\component.json" />
+    <Content Include="bower_components\jquery\composer.json" />
+    <Content Include="bower_components\jquery\package.json" />
+    <Content Include="bower_components\jquery\README.md" />
+    <Compile Include="bower_components\jquery\jquery-migrate.js" />
+    <Compile Include="bower_components\jquery\jquery-migrate.min.js" />
+    <Compile Include="bower_components\jquery\jquery.js" />
+    <Compile Include="bower_components\jquery\jquery.min.js" />
+    <Compile Include="bower_components\bootstrap\js\affix.js" />
+    <Compile Include="bower_components\bootstrap\js\alert.js" />
+    <Compile Include="bower_components\bootstrap\js\button.js" />
+    <Compile Include="bower_components\bootstrap\js\carousel.js" />
+    <Compile Include="bower_components\bootstrap\js\collapse.js" />
+    <Compile Include="bower_components\bootstrap\js\dropdown.js" />
+    <Compile Include="bower_components\bootstrap\js\modal.js" />
+    <Compile Include="bower_components\bootstrap\js\popover.js" />
+    <Compile Include="bower_components\bootstrap\js\scrollspy.js" />
+    <Compile Include="bower_components\bootstrap\js\tab.js" />
+    <Compile Include="bower_components\bootstrap\js\tooltip.js" />
+    <Compile Include="bower_components\bootstrap\js\transition.js" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Compile Include="bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Compile Include="bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="test\e2e\runner.html" />
+    <Compile Include="test\e2e\scenarios.js" />
+    <Compile Include="test\unit\configSpec.js" />
+    <Compile Include="test\unit\controllersSpec.js" />
+    <Compile Include="test\unit\directivesSpec.js" />
+    <Compile Include="test\unit\filtersSpec.js" />
+    <Compile Include="test\unit\servicesSpec.js" />
+    <Content Include="test\lib\angular\version.txt" />
+    <Compile Include="test\lib\angular\angular-mocks.js" />
+    <Compile Include="test\lib\angular\angular-route.js" />
+    <Compile Include="test\lib\angular\angular-scenario.js" />
+    <Compile Include="test\lib\angular\angular.js" />
+    <Compile Include="test\lib\firebase\angularfire.js" />
+    <Compile Include="test\lib\firebase\firebase-debug.js" />
+    <Compile Include="test\lib\firebase\firebase-simple-login.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\css" />
+    <Folder Include="app\js" />
+    <Folder Include="app\partials" />
+    <Folder Include="bower_components\" />
+    <Folder Include="bower_components\bootstrap" />
+    <Folder Include="bower_components\bootstrap\dist\" />
+    <Folder Include="bower_components\bootstrap\dist\css" />
+    <Folder Include="bower_components\bootstrap\dist\fonts" />
+    <Folder Include="bower_components\bootstrap\dist\js" />
+    <Folder Include="bower_components\bootstrap\js" />
+    <Folder Include="bower_components\jquery" />
+    <Folder Include="config" />
+    <Folder Include="scripts" />
+    <Folder Include="test\" />
+    <Folder Include="test\e2e" />
+    <Folder Include="test\lib\" />
+    <Folder Include="test\lib\angular" />
+    <Folder Include="test\lib\firebase" />
+    <Folder Include="test\unit" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

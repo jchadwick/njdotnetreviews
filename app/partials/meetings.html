@@ -1,0 +1,21 @@
+﻿<h3>Meetings</h3>
+<ul class="meetings">
+    <li class="meeting" ng-repeat="meeting in meetings | orderByPriority">
+        {{meeting.title}} ({{meeting.date}}) <a href="#" ng-click="$parent.deleteMeeting(meeting.$id)">X</a>
+    </li>
+</ul>
+
+<fieldset>
+    <legend>Add Meeting</legend>
+
+    <p>
+        <input type="text" ng-model="newMeeting.title" placeholder="Title" />
+        <input type="date" ng-model="newMeeting.date" placeholder="Date" />
+    </p>
+
+    <p>
+        <strong>New Meeting:</strong> <span>{{newMeeting.title}} ({{newMeeting.date}})</span>
+    </p>
+
+    <button class="btn btn-primary" ng-click="addMeeting(newMeeting)">Add Meeting</button>
+</fieldset>
